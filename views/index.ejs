@@ -1,0 +1,22 @@
+<%- include("layout/header") %>
+<main class="container d-flex justify-content-center mt-5">
+  <div class="m-auto w-fit-content">
+    <form action="/" method="post" class="input-group">
+      <input
+        type="text"
+        name="pLanguage"
+        placeholder="Programming Language"
+        class="form-control"
+      />
+      <input type="submit" value="Add" class="btn btn-primary" />
+    </form>
+    <ul class="list-group mt-3">
+      <% if(plName.length > 0){ %> <%for(let i = 0; i < plName.length; i++){%>
+      <li class="list-group-item"><%= plName[i] %></li>
+      <% } %> <%}else{%>
+      <li class="list-group-item">Data not found</li>
+      <%}%>
+    </ul>
+  </div>
+</main>
+<%- include("layout/footer") %>
